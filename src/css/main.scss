@@ -1,6 +1,63 @@
-.test {
+*, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:rgb(12, 12, 12);
+}
+
+
+.map-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(41, 41, 41);
+}
+
+.stocism-text {
+    // color: white;
+    background-color: transparent;
+    -webkit-text-stroke: 2px white;
+    font-size: 8vw;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+
+    .veil {
+        content: "";
+        position: absolute;
+        background-color: transparent;
+        // background-color: green;
+        height: 100%;
+        width: 100%;
+        transform: translateY(100%);
+        z-index: 1;
+    }
+
+    .stocism-letter {
+        background-color: transparent;
+        letter-spacing: 5px;
+        transform: translateY(100%);
+        
+        span {
+            background-color: transparent;
+            // transform: translate(-5vw, 5vh) rotate(45deg);
+            opacity: 0;
+            display: inline-block;
+        }
+
+        .anim-letter {
+            transition: transform 1s,opacity 2s cubic-bezier(.48,.73,.38,1);
+            transform: translate(0vw, 0vh) rotate(0deg);
+            opacity: 1;
+        }
+
+        .anim-letterAppear {
+            transform: translateY(-100%);
+            opacity: 1;
+            transition: transform 1s cubic-bezier(.48,.73,.38,1);
+        }
+    }
+
+    
 }
