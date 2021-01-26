@@ -57,6 +57,39 @@
             transition: transform 1s cubic-bezier(.48,.73,.38,1);
         }
     }
+}
 
-    
+.ml7 {
+    position: absolute;
+    font-weight: 900;
+    font-size: 3.7em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+
+    .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.2em;
+        padding-right: 0.05em;
+        padding-bottom: 0.1em;
+        overflow: hidden;
+        background-color: transparent;
+    }
+
+    .letters {
+        background-color: transparent;
+    }
+
+    .letter {
+        transform-origin: 0 100%;
+        display: inline-block;
+        line-height: 1em;
+        color: transparent;
+        background-color: transparent;
+        letter-spacing: 5px;
+        transform: translate(.55em, 1.1em);
+        -webkit-text-stroke: .5px white;
+    } 
 }

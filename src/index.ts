@@ -1,5 +1,5 @@
 import { landingPageAnimations } from './Animations';
-import { TimelineSequence, AnimationWAP } from './Timeline'
+import { TimelineSequence, AnimationWAP, animationWaveText } from './Timeline'
 import './css/main.scss';
  
 
@@ -25,10 +25,34 @@ const AnimText = () => {
     }
 }
 
+//Pour faire passer quelque chose avec un voile, il suffit que le parent soit en overflow hidden, dans ce cas, 
+//l'enfant qui est dehors de son cadre sera invisible
+
+
+// setTimeout(() => {
+//     AnimText();
+// }, 3500);  
+
+var textWrapper = document.querySelector('.letters');
+textWrapper!.innerHTML = textWrapper!.textContent!.replace(/([^\x00-\x80]|\w|\')/g, "<span class='letter'>$&</span>");
+const letterArray = document.querySelectorAll(".letter");
 
 setTimeout(() => {
-    AnimText();
-}, 3500);  
+    animationWaveText(
+        letterArray, 
+        [
+            { transform: 'translate(.55em, 1.1em) rotate(180deg)' },
+            { transform: 'translate(0, 0) rotate(0deg)'},
+        ], 
+        {
+            duration: 750,
+            iterations: 1,
+            fill: 'forwards',
+            easing: 'cubic-bezier(.48,.73,.38,1)',
+        },
+        40
+    )
+}, 2750);
 
 //Animation fade in par le bas 
 const NextAnimText = () =>  {
