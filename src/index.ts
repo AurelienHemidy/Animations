@@ -26,7 +26,7 @@ const AnimText = () => {
 }
 
 //Pour faire passer quelque chose avec un voile, il suffit que le parent soit en overflow hidden, dans ce cas, 
-//l'enfant qui est dehors de son cadre sera invisible
+//l'enfant qui est en dehors de son cadre sera invisible
 
 
 // setTimeout(() => {

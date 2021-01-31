@@ -21,7 +21,7 @@ function runAnimation(i: number, delay: number, animationSequence: AnimationWAP[
 }
 
 
-//Timeline pour array avec éléments ayant la même classe auquel on ajoute la même animation avec un delay enter chaque animation
+//Timeline pour array avec éléments ayant la même classe auquel on ajoute la même animation avec un delay entre chaque animation
 export const animationWaveText = (ArraySequence: NodeListOf<Element>, animationSequence: {}[], transitionSequence: {}, delayAnimation: number) => {
     let delayAnimationNumber = 0;
     ArraySequence.forEach(text => {
